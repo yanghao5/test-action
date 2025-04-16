@@ -1,16 +1,19 @@
-name: Update
-
-permissions:
-  issues: write
-  
+name: convert
 on:
   workflow_dispatch:
-
 jobs:
-  update-template:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - name: Python Env
-      - run: |
-          python3 --version
+        - name: Checkout code
+          uses: actions/checkout@v4
+        - name: Git Clone sing-box-subscribe
+          run: |
+            echo "Clone sing-box-subscribe repo"
+            python3 --version
+
+            
+            
+          
+
+
