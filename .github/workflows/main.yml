@@ -1,8 +1,5 @@
 name: Update
 
-# on:
-#   schedule:
-#     - cron: '0 0 * * *'  # 每天午夜12点执行（UTC）
 permissions:
   issues: write
   
@@ -14,9 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Checkout code
-        uses: dacbd/create-issue-action@main
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: "Test"
-          body: "Test"
+      - name: Python Env
+      - run: |
+          python3 --version
