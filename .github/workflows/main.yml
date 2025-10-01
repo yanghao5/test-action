@@ -9,7 +9,7 @@ jobs:
           uses: actions/checkout@v4
         - name: Github CLI
           run: |
-            cho "xxxx" >> test.txt
+            echo "xxxx" >> test.txt
             git config --local user.name "github-actions[bot]"
             git config --local user.email "actions@github.com"
             git add .
