@@ -4,6 +4,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-24.04
+    permissions:
+      contents: write  # 允许 GitHub Actions 修改仓库内容
     steps:
         - name: Checkout code
           uses: actions/checkout@v4
