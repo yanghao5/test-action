@@ -9,9 +9,13 @@ jobs:
           uses: actions/checkout@v4
         - name: Github CLI
           run: |
-            gh --version
-            echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token  
-            gh auth status
+            cho "xxxx" >> test.txt
+            git config --local user.name "github-actions[bot]"
+            git config --local user.email "actions@github.com"
+            git add .
+            git commit -m "test"
+            git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+            git push -f -u origin main
 
 
 
