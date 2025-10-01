@@ -10,6 +10,7 @@ jobs:
         - name: Github CLI
           run: |
             gh --version
+            echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token  # 使用 GITHUB_TOKEN 进行认证
 
 
 
