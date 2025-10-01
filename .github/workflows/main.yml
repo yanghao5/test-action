@@ -11,6 +11,8 @@ jobs:
           run: |
             gh --version
             echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token  
+            gh auth status
+
 
 
 
