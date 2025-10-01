@@ -14,8 +14,8 @@ jobs:
             git config --local user.email "actions@github.com"
             git add .
             git commit -m "test"
-            git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
             git push
+#git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
 
 
 
